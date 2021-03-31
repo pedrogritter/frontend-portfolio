@@ -32,21 +32,20 @@ const NavbarComponent = styled.nav`
   position: relative;
   z-index: 10;
 
+  flex-direction: column;
+
+
   color: white;
 `;
 
-const Left = styled.div`
+const Top = styled.div`
     display: inline-flex;
-    width: 60vw;
-    padding-left:2rem;
 `;
 
-const Right = styled.div`
+const Bottom = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    width: 40vw;
-    padding-right:4rem;
 `;
 
 const Logo = styled.div`
@@ -55,6 +54,7 @@ const Logo = styled.div`
 
 const NavElement = styled.h3`
     padding: 1rem;
+    font-weight:500;
 `; 
 
 
@@ -64,14 +64,15 @@ const Navbar = () => {
         <NavbarOuterContainer>
             <NavbarContainer>
                 <NavbarComponent>
-                    <Left>
-                        <Logo> <h1>Pedro Gritter - FrontEnd developer</h1></Logo>
-                    </Left>
-                    <Right>
+                    {/* <Top>
+                        <Logo> <h1>FrontEnd Dev</h1></Logo>
+                    </Top> */}
+                    <Bottom>
                         <NavElement>About</NavElement>
+                        <NavElement>Articles</NavElement>
                         <NavElement>Projects</NavElement>
                         <NavElement>Contact</NavElement>
-                    </Right>
+                    </Bottom>
                 </NavbarComponent>
             </NavbarContainer>
         </NavbarOuterContainer>
