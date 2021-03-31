@@ -3,9 +3,17 @@ import React from "react";
 // Style
 import styled from "styled-components";
 
+const NavbarOuterContainer = styled.div`
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 100;
+`;
+
 
 const NavbarContainer = styled.div`
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,8,41,1) 20%, rgba(6,6,77,1) 75%);
+    background: linear-gradient(90deg, rgb(10, 16, 16) 0%, rgb(20, 31, 31) 75%, rgb(41, 61, 61) 96%);
     z-index: 100;
     height: 65px;
     z-index: 100;
@@ -53,18 +61,20 @@ const NavElement = styled.h3`
 const Navbar = () => {
 
     return (
-        <NavbarContainer>
-            <NavbarComponent>
-                <Left>
-                    <Logo> <h1>Pedro Gritter - FrontEnd developer</h1></Logo>
-                </Left>
-                <Right>
-                    <NavElement>About</NavElement>
-                    <NavElement>Projects</NavElement>
-                    <NavElement>Contact</NavElement>
-                </Right>
-            </NavbarComponent>
-        </NavbarContainer>
+        <NavbarOuterContainer>
+            <NavbarContainer>
+                <NavbarComponent>
+                    <Left>
+                        <Logo> <h1>Pedro Gritter - FrontEnd developer</h1></Logo>
+                    </Left>
+                    <Right>
+                        <NavElement>About</NavElement>
+                        <NavElement>Projects</NavElement>
+                        <NavElement>Contact</NavElement>
+                    </Right>
+                </NavbarComponent>
+            </NavbarContainer>
+        </NavbarOuterContainer>
     )
 }
 

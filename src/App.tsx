@@ -2,15 +2,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
+import Footer from './components/footer';
+import newlogo from './LogoMakr.png'
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={newlogo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          I am a <b>FrontEnd Developer</b> creating modern websites
         </p>
         <a
           className="App-link"
@@ -18,9 +20,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Contact
         </a>
       </header>
+      <Footer />
     </div>
   );
 }
