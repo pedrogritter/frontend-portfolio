@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import styled from "styled-components";
 
 import newlogo from './LogoMakr.png'
+import ContentSelector from './components/content-selector';
 
 const HeroTitle = styled.div`
   font-size: 24px;
@@ -43,6 +44,8 @@ function App() {
         >
           Contact me
         </Contact>
+        <ContentSelector />
+
       </header>
       <Footer />
     </div>

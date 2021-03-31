@@ -20,11 +20,21 @@ const FooterContainer = styled.footer`
     flex-direction: column;
 `;
 
-const Link = styled.div`
+const Link = styled.a`
     padding: 1rem 1rem;
+    display:flex;
     align-items: center;
+    justify-content:center;
     height: 64px;
+    text-decoration:none;
+    cursor: pointer;
+    color: white;
+
 `;
+
+const LinkText = styled.div`
+    padding-right:0.5rem;
+` 
 
 const GitIcon = styled.img`
     width:32px;
@@ -40,11 +50,9 @@ const Copyright = styled.span`
 const Footer = () => {
 
     const github = <>
-        <Link>
-            <span>Follow me on </span> 
-            <a href="https://github.com/pedrogritter">
-                <GitIcon src={githubMark} />
-            </a>
+        <Link href="https://github.com/pedrogritter">
+            <LinkText>Follow me on </LinkText> 
+            <GitIcon src={githubMark} />
         </Link>
     </>
 

@@ -38,9 +38,9 @@ const NavbarComponent = styled.nav`
   color: white;
 `;
 
-const Top = styled.div`
-    display: inline-flex;
-`;
+// const Top = styled.div`
+//     display: inline-flex;
+// `;
 
 const Bottom = styled.div`
     display: flex;
@@ -48,9 +48,9 @@ const Bottom = styled.div`
     justify-content: flex-end;
 `;
 
-const Logo = styled.div`
-    padding: 1rem;
-`;
+// const Logo = styled.div`
+//     padding: 1rem;
+// `;
 
 const NavElement = styled.h3`
     padding: 1rem;
