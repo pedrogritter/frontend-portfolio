@@ -1,54 +1,29 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
+
+import Home from './pages/home';
+import Articles from './pages/articles';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
-import styled from "styled-components";
-
-import newlogo from './LogoMakr.png'
-import ContentSelector from './components/content-selector';
-
-const HeroTitle = styled.div`
-  font-size: 24px;
-  font-weight: 800;
-  padding: 1rem;
-`;
-
-const Contact = styled.a`
-  margin-top:1rem;  
-  font-size: 18px;
-  font-weight: 500;
-  padding: 1rem;
-  background-color: darkslategrey;
-  color: white;
-  padding: 1em 1.5em;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius:8px;
-`;
+import Projects from './pages/projects';
+import Contact from './pages/contact';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <header className="App-header">
-        <img src={newlogo} className="App-logo" alt="logo" />
-        <HeroTitle>
-          I am a <b>FrontEnd Dev</b> creating modern websites
-        </HeroTitle>
-        <Contact
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Contact me
-        </Contact>
-        <ContentSelector />
+    <Router>
+      <div className="App">
+          <Navbar />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/articles" component={Articles} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/contact" component={Contact} />
 
-      </header>
-      <Footer />
-    </div>
+          </Switch>
+          <Footer />
+      </div>
+    </Router>
   );
 }
 
