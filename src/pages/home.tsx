@@ -3,6 +3,7 @@ import styled from "styled-components";
 import newlogo from "../LogoMakr.png";
 import ContentSelector from "../components/content-selector";
 import { Link } from "react-router-dom";
+import { down } from "styled-breakpoints";
 
 const PageContainer = styled.div`
   background-color: black;
@@ -14,6 +15,10 @@ const PageContainer = styled.div`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
+  ${down('lg')} {
+        padding-top: 8rem;    
+  }  
 `;
 
 const HeroTitle = styled.div`

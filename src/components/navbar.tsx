@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Link } from "react-router-dom";
+import { down } from "styled-breakpoints";
 
 const NavbarOuterContainer = styled.div`
   position: fixed;
@@ -37,21 +38,39 @@ const NavbarComponent = styled.nav`
   min-height: 3.25rem;
   position: relative;
   z-index: 10;
-
   flex-direction: row;
-
   color: white;
+
+  ${down('lg')} {
+    flex-direction: column;
+    justify-content: center;
+  }
+
 `;
 
 const Top = styled.div`
   display: inline-flex;
   padding-right: 6rem;
+
+  ${down('lg')} {
+    padding:0rem;
+    margin-top: 5rem;
+  }
 `;
 
 const Bottom = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+
+  ${down('lg')} {
+    width: 100vw;
+    justify-content: center;
+    background: linear-gradient(
+    black, 
+    transparent
+  );
+  }
 `;
 
 const Logo = styled.div`
