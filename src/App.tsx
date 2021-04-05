@@ -8,6 +8,7 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Projects from './pages/projects';
 import Contact from './pages/contact';
+import Article from './pages/article';
 
 function App() {
   return (
@@ -17,9 +18,9 @@ function App() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/articles" component={Articles} />
+            <Route path="/article/:id" component={Article} />
             <Route path="/projects" component={Projects} />
             <Route path="/contact" component={Contact} />
-
           </Switch>
           <Footer />
       </div>

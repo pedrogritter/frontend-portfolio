@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import projects from "../resources/project_list.json";
+
 
 const PageContainer = styled.div`
     background-color: black ;
@@ -12,11 +14,30 @@ const PageContainer = styled.div`
     color: white;
 `;
 
+const ItemContainer = styled.div`
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+`;
+
+
+
 
 const Projects = () => {
+
+    const project_list = projects.map((item, index) => {
+        return (
+            <ItemContainer>
+                <h4 key={index}>{item.id} - </h4>
+                <h4 key={index}>{item.title}</h4>
+            </ItemContainer>
+        )
+    });
+
     return (
         <PageContainer>
             <h1>Projects</h1>
+            {project_list}
         </PageContainer>
     )
 }

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import articles from "../resources/article_list.json";
+
 
 const PageContainer = styled.div`
     background-color: black ;
@@ -12,11 +14,27 @@ const PageContainer = styled.div`
     color: white;
 `;
 
+const ArticleContainer = styled.div`
+    display:flex;
+    flex-direction: row;
+`;
+
 
 const Articles = () => {
+
+    const article_list = articles.map( (item, index) => {
+        return (
+            <ArticleContainer>
+                <h3 key={index}>{item.id} - </h3>
+                <h3 key={index}>{item.title}</h3>
+            </ArticleContainer>
+        )
+    });
+
     return (
         <PageContainer>
             <h1>Articles</h1>
+            {article_list}
         </PageContainer>
     )
 }
